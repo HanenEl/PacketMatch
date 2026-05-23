@@ -4,10 +4,10 @@
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python)
 ![Web Scraping](https://img.shields.io/badge/Web_Scraping-Data_Collection-4CAF50?style=for-the-badge)
+![BeautifulSoup](https://img.shields.io/badge/-BeautifulSoup4-59666C?style=for-the-badge&logo=python&logoColor=white)
 ![Pandas](https://img.shields.io/badge/-Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 ![Seaborn](https://img.shields.io/badge/-Seaborn-4C72B0?style=for-the-badge&logo=seaborn&logoColor=white)
 ![Scikit-Learn](https://img.shields.io/badge/-Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/-TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=for-the-badge)
 ![Dataset](https://img.shields.io/badge/Dataset-WE%20Data-blue?style=for-the-badge)
@@ -60,8 +60,10 @@ The system:
 - Helps reduce extra bundle costs
 - Supports smarter internet usage decisions
 
-![Home](images/home.png)
-![Recommendation](images/result.png)
+<div align="center">
+  <img src="images/Package Information.png" width="45%"/>
+  <img src="images/Recommender.png" width="45%"/>
+</div>
 
 ---
 
@@ -74,7 +76,11 @@ PacketMatch/
 │   ├── WE_centrals.xlsx
 │   ├── WE_Dataset.csv
 │   └── we_plans.xlsx
-│
+|
+├── images/                      
+│   ├── Package Information.png
+│   └── Recommender.png
+|
 ├── models/                     
 │   ├── we_model.pkl
 │   ├── we_feature_cols.pkl
@@ -90,10 +96,6 @@ PacketMatch/
 │
 ├── utils/                      
 │   └── WE_Dataset_Generator_v6.py
-│
-├── images/                      
-│   ├── Package Information.png
-│   └── Recommender.png
 │
 ├── user_app.py                  
 ├── style.css
