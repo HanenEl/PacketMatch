@@ -77,6 +77,9 @@ PacketMatch/
 │   ├── WE_Dataset.csv
 │   └── we_plans.xlsx
 |
+├── data_generation/                      
+│   └── WE_Dataset_Generator_v6.py
+|
 ├── images/                      
 │   ├── Package Information.png
 │   └── Recommender.png
@@ -93,9 +96,6 @@ PacketMatch/
 ├── scrapers/                    
 │   ├── Centrals_Scraper.py
 │   └── Packages_Scraper.py
-│
-├── utils/                      
-│   └── WE_Dataset_Generator_v6.py
 │
 ├── user_app.py                  
 ├── style.css
