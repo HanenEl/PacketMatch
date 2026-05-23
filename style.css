@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');
+
+/* ── Base ── */
+html, body, [class*="css"] {
+    font-family: 'Cairo', sans-serif;
+    background-color: #F5F0E8;
+    color: #1A1A1A;
+}
+
+.block-container,
+div[data-testid="stAppViewBlockContainer"],
+.main .block-container {
+    padding-top: 2rem !important;
+}
+
+.stDeployButton { display: none !important; }
+
+/* ── Streamlit overrides ── */
+[data-testid="stMetricValue"] { font-size: 2rem; font-weight: 700; color: #6B21A8; }
+[data-testid="stMetricLabel"] { color: #6B6B6B; font-size: 0.85rem; }
+
+.stButton > button {
+    background-color: #6B21A8 !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 8px !important;
+    font-family: 'Cairo', sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 1rem !important;
+    padding: 0.6rem 1.5rem !important;
+}
+.stButton > button:hover { background-color: #581c87 !important; }
+
+label { color: #1A1A1A !important; font-weight: 600 !important; font-size: 0.9rem !important; }
+
+.stProgress > div > div > div > div { background-color: #6B21A8 !important; }
+
+/* ── Utilities ── */
+.we-divider    { border: none; border-top: 1px solid #E0D8CC; margin: 20px 0; }
+
+.we-section-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1A1A1A;
+    border-left: 4px solid #6B21A8;
+    padding-left: 12px;
+    margin-bottom: 16px;
+}
+
+/* ── Text color helpers ── */
+.text-green  { color: #22c55e; }
+.text-gold   { color: #B8960C; }
+.text-blue   { color: #60a5fa; }
+.text-red    { color: #f87171; }
+
+.we-result-card {
+    border-radius: 14px;
+    padding: 28px;
+    text-align: center;
+    color: white;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.card-upgrade  { background: linear-gradient(135deg, #1A1A1A, #1a0a2e); border-color: #6B21A8; }
+.card-downgrade{ background: linear-gradient(135deg, #0a1628, #0d1f3c); border-color: #60a5fa; }
+.card-same     { background: linear-gradient(135deg, #0d3320, #0a2918); border-color: #22c55e; padding: 24px; }
+
+.we-card-subtitle   { font-size: 0.8rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+.we-card-pkg-name   { font-size: 1.8rem; font-weight: 900; margin: 8px 0; }
+.card-same .we-card-pkg-name { font-size: 1.5rem; margin: 6px 0; }
+
+.we-card-details    { color: rgba(245,240,232,0.75); font-size: 1rem; }
+.we-card-muted      { color: rgba(255,255,255,0.65); font-size: 0.9rem; }
+
+.we-card-price-row  { margin-top: 14px; font-size: 0.9rem; color: rgba(245,240,232,0.6); }
+.we-card-price-val  { font-size: 1.1rem; font-weight: bold; }
+
+/* ── Plan Cards ── */
+.we-plan-card {
+    background: white;
+    border: 1px solid #E0D8CC;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden;
+    margin: 10px 15px;
+}
+.we-plan-card:hover { transform: translateY(-5px); box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
+
+.we-plan-top    { padding: 30px 24px 15px; }
+.we-plan-bottom { background: #F4F4F5; padding: 24px; border-top: 1px solid #E5E7EB; }
+
+/* shared bold text style for size & price */
+.we-plan-size   { color: #6B21A8; font-size: 2.2rem; font-weight: 900; margin-bottom: 10px; }
+.we-plan-price  { font-size: 1.3rem; font-weight: 900; color: #1A1A1A; margin-bottom: 5px; }
+.we-plan-price-year  { font-size: 0.9rem; color: #6B6B6B; }
+.we-plan-speed-text  { font-size: 0.95rem; color: #4B5563; }
+
+/* ── Category Radio Buttons (Packages page) ── */
+section[data-testid="stMain"] div[role="radiogroup"] {
+    justify-content: center !important;
+    gap: 30px;
+    width: 100% !important;
+    flex-wrap: nowrap;        
+}
+
+section[data-testid="stMain"] div[role="radiogroup"] > label {
+    background-color: #D1D5DB !important;
+    width: 180px !important;
+    height: 100px !important;
+    border-radius: 16px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    position: relative !important;
+}
+
+section[data-testid="stMain"] div[role="radiogroup"] > label:hover,
+section[data-testid="stMain"] div[role="radiogroup"] > label[data-checked="true"] {
+    background-color: #6B21A8 !important;
+    box-shadow: 0 6px 12px rgba(107,33,168,0.2) !important;
+    transform: translateY(-2px);
+}
+
+section[data-testid="stMain"] div[role="radiogroup"] > label[data-checked="true"] {
+    box-shadow: 0 10px 20px rgba(107,33,168,0.3) !important;
+}
+
+/* Speed label under each button */
+section[data-testid="stMain"] div[role="radiogroup"] > label::after {
+    position: absolute;
+    bottom: -35px;
+    font-size: 0.9rem !important;
+    font-weight: 600 !important;
+    color: #6b7280 !important;
+    white-space: nowrap;
+}
+section[data-testid="stMain"] div[role="radiogroup"] > label:nth-child(1)::after { content: "Up To 30 Mbps";  }
+section[data-testid="stMain"] div[role="radiogroup"] > label:nth-child(2)::after { content: "Up To 70 Mbps";  }
+section[data-testid="stMain"] div[role="radiogroup"] > label:nth-child(3)::after { content: "Up To 100 Mbps"; }
+section[data-testid="stMain"] div[role="radiogroup"] > label:nth-child(4)::after { content: "Up To 200 Mbps"; }
+section[data-testid="stMain"] div[role="radiogroup"] > label:nth-child(5)::after { content: "Up To 500 Mbps"; }
+
+section[data-testid="stMain"] div[role="radiogroup"] > label[data-checked="true"]::after { color: #6B21A8 !important; }
+
+section[data-testid="stMain"] div[role="radiogroup"] > label * {
+    font-size: 1.4rem !important;
+    font-weight: 900 !important;
+    color: white !important;
+    font-style: italic !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+}
+
+section[data-testid="stMain"] div[role="radiogroup"] > label > div:first-child { display: none !important; }
+
+/* ── Sidebar ── */
+[data-testid="stSidebar"] { background-color: #1A1A1A; }
+[data-testid="stSidebar"] * { color: #ffffff !important; }
+[data-testid="stSidebar"] .we-divider { border-top: 1px solid #333; }
+
+[data-testid="stSidebar"] div[role="radiogroup"] > label {
+    background-color: transparent !important;
+    padding: 10px 15px !important;
+    margin-bottom: 5px;
+}
+[data-testid="stSidebar"] div[role="radiogroup"] > label:hover          { background-color: #333 !important; }
+[data-testid="stSidebar"] div[role="radiogroup"] > label[data-checked="true"] { background-color: #6B21A8 !important; }
