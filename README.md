@@ -120,13 +120,6 @@ PacketMatch/
 
 ## Installation
 
-Clone the repository:
-
-```bash
-git clone https://github.com/YOUR_USERNAME/PacketMatch.git
-cd PacketMatch
-```
-
 Install dependencies:
 
 ```bash
